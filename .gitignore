@@ -26,4 +26,6 @@
 *.nav
 *.snm
 *.vrb
+*.spl
+frontMatter.pdf
 build/

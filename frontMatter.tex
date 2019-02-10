@@ -1,0 +1,127 @@
+%% \documentclass[preprint,12pt,3p]{elsarticle}
+%% Use the option review to obtain double line spacing
+\documentclass[preprint,review,12pt]{elsarticle}
+
+\usepackage{amssymb}
+\usepackage{amsmath}
+\usepackage{graphicx}
+\usepackage[retainorgcmds]{IEEEtrantools}
+\usepackage[colorlinks]{hyperref}
+\usepackage{siunitx}
+\usepackage{pdflscape}
+% disable labelindent
+\let\labelindent\relax
+\usepackage{enumitem}
+\usepackage[normalem]{ulem}
+\useunder{\uline}{\ul}{}
+\usepackage{setspace} % \doublespacing
+\usepackage[utf8]{inputenc}
+\usepackage[linesnumbered, ruled, vlined]{algorithm2e}
+\usepackage{rotating}
+% \usepackage{subfigure}
+\usepackage{nicefrac}
+\usepackage{todonotes}
+\usepackage{hyperref}
+\usepackage{xspace}
+\usepackage{float}
+\usepackage{caption}
+\usepackage{subcaption}
+% \usepackage{floatrow}
+\usepackage{rotating, lscape, longtable, tabu, booktabs, siunitx, multirow}
+\usepackage[capitalise, noabbrev]{cleveref}
+\usepackage{tkz-graph}
+\usepackage{verbatim}
+\usepackage{mathtools}
+
+
+\newcommand{\uset}[1]{\ifmmode\left\{\,#1\,\right\}\else\{\,#1\,\}\fi}
+\newcommand{\ulst}[1]{\ifmmode\left[\,#1\,\right]\else[\,#1\,]\fi}
+\newcommand{\upar}[1]{\ifmmode\left(\,#1\,\right)\else(\,#1\,)\fi}
+\newcommand{\uioc}[1]{\ifmmode\left(\,#1\,\right]\else(\,#1\,]\fi}
+\newcommand{\uico}[1]{\ifmmode\left[\,#1\,\right)\else[\,#1\,)\fi}
+
+\newcommand{\ie}{i.\,e.,\xspace}
+\newcommand{\eg}{e.\,g.,\xspace}
+\newcommand{\false}{\texttt{false}}
+\newcommand{\true}{\texttt{true}}
+
+% tikz libraries
+\usepackage{tkz-graph}
+\usepackage{verbatim}
+\usetikzlibrary{arrows,arrows.meta,shapes,decorations.pathmorphing, decorations.markings, positioning}
+\let\svtikzpicture\tikzpicture
+\def\tikzpicture{\noindent\svtikzpicture}
+
+% Theorem Styles
+\newtheorem{theorem}{Theorem}
+\newtheorem{lemma}[theorem]{Lemma}
+\newtheorem{proposition}[theorem]{Proposition}
+\newtheorem{corollary}[theorem]{Corollary}
+\newtheorem{conjecture}[theorem]{Conjecture}
+\newenvironment{proof}{\noindent\textbf{Proof}.}{\hfill$\square$}
+% Definition Styles
+\newtheorem{definition}{Definition}
+\newtheorem{example}{Example}
+\newtheorem{remark}{Remark}
+
+\journal{Journal name}
+
+\begin{document}
+
+\begin{frontmatter}
+
+            
+\title{Article title}
+
+
+\author[label1]{Iago A. Carvalho\corref{cor1}}
+\ead{iagoac@dcc.ufmg.br}
+\ead[url]{http://www.iagoac.github.io}
+
+\author[label2]{Homer J. Simpson}
+\ead{homer@thesimpsons.com}
+
+\address[label1]{Department of Computer Science, Universidade Federal de Minas Gerais}
+
+\cortext[cor1]{I am corresponding author}
+
+\address[label2]{Twenty Century Fox, USA}
+
+\begin{abstract}
+There will be an abstract here.
+\end{abstract}
+
+\begin{keyword}
+Keyword 1 \sep Keyword 2 \sep Keyword 3 \sep Keyword 4 \sep Keyword 5
+\end{keyword}
+
+\end{frontmatter}
+
+
+% \linenumbers
+
+\input{mainText}
+
+\section*{Aknowledgments}
+This study was financed in part by the \emph{Coordenação de Aperfeiçoamento de Pessoal de Nível Superior - Brasil} (CAPES) - Finance Code 001, the \emph{Conselho Nacional de Desenvolvimento Científico e Tecnológico - Brasil} (CNPq), and the \emph{Fundação de Amparo à Pesquisa de Minas Gerais - Brasil} (FAPEMIG).
+
+\bibliographystyle{elsarticle-num}
+% \bibliographystyle{elsarticle-harv}
+% \bibliographystyle{elsarticle-num-names}
+% \bibliographystyle{model1a-num-names}
+% \bibliographystyle{model1b-num-names}
+% \bibliographystyle{model1c-num-names}
+% \bibliographystyle{model1-num-names}
+% \bibliographystyle{model2-names}
+% \bibliographystyle{model3a-num-names}
+% \bibliographystyle{model3-num-names}
+% \bibliographystyle{model4-names}
+% \bibliographystyle{model5-names}
+% \bibliographystyle{model6-num-names}
+
+\bibliography{bibsample}
+
+\end{document}
+
+%%
+%% End of file `elsarticle-template-num.tex'.
