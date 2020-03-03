@@ -7,6 +7,9 @@
 \usepackage{graphicx}
 \usepackage[retainorgcmds]{IEEEtrantools}
 \usepackage[colorlinks]{hyperref}
+\hypersetup{
+  citecolor = {blue}
+}
 \usepackage{siunitx}
 \usepackage{pdflscape}
 % disable labelindent
@@ -18,25 +21,24 @@
 \usepackage[utf8]{inputenc}
 \usepackage[linesnumbered, ruled, vlined]{algorithm2e}
 \usepackage{rotating}
-% \usepackage{subfigure}
 \usepackage{nicefrac}
-\usepackage{todonotes}
-\usepackage{hyperref}
 \usepackage{xspace}
 \usepackage{float}
 \usepackage{caption}
 \usepackage{subcaption}
-% \usepackage{floatrow}
 \usepackage{rotating, lscape, longtable, tabu, booktabs, siunitx, multirow}
 \usepackage[capitalise, noabbrev]{cleveref}
-\usepackage{tkz-graph}
 \usepackage{verbatim}
 \usepackage{mathtools}
 
-% algorithm2e input and output definitions
-\SetKwInOut{Input}{input}
-\SetKwInOut{Output}{output}
+% tikz libraries
+\usepackage{tkz-graph}
 
+\usetikzlibrary{arrows,arrows.meta,shapes,decorations.pathmorphing, decorations.markings, positioning}
+\let\svtikzpicture\tikzpicture
+\def\tikzpicture{\noindent\svtikzpicture}
+
+% personal definitions
 \newcommand{\uset}[1]{\ifmmode\left\{\,#1\,\right\}\else\{\,#1\,\}\fi}
 \newcommand{\ulst}[1]{\ifmmode\left[\,#1\,\right]\else[\,#1\,]\fi}
 \newcommand{\upar}[1]{\ifmmode\left(\,#1\,\right)\else(\,#1\,)\fi}
@@ -47,13 +49,6 @@
 \newcommand{\eg}{e.\,g.,\xspace}
 \newcommand{\false}{\texttt{false}}
 \newcommand{\true}{\texttt{true}}
-
-% tikz libraries
-\usepackage{tkz-graph}
-\usepackage{verbatim}
-\usetikzlibrary{arrows,arrows.meta,shapes,decorations.pathmorphing, decorations.markings, positioning}
-\let\svtikzpicture\tikzpicture
-\def\tikzpicture{\noindent\svtikzpicture}
 
 % Theorem Styles
 \newtheorem{theorem}{Theorem}
@@ -73,18 +68,18 @@
 
 \begin{frontmatter}
 
-            
+
 \title{Article title}
 
 
-\author[label1]{Iago A. Carvalho\corref{cor1}}
-\ead{iagoac@dcc.ufmg.br}
-\ead[url]{http://www.iagoac.github.io}
+\author[unicamp]{Iago A. Carvalho\corref{cor1}}
+\ead{iagoac@ic.unicamp.br}
+\ead[url]{http://iagoac.github.io/}
 
 \author[label2]{Homer J. Simpson}
 \ead{homer@thesimpsons.com}
 
-\address[label1]{Department of Computer Science, Universidade Federal de Minas Gerais}
+\address[unicamp]{Institute of Computing, Universidade Estadual de Campinas}
 
 \cortext[cor1]{I am corresponding author}
 
@@ -106,7 +101,7 @@ Keyword 1 \sep Keyword 2 \sep Keyword 3 \sep Keyword 4 \sep Keyword 5
 \input{mainText}
 
 \section*{Aknowledgments}
-This study was financed in part by the \emph{Coordenação de Aperfeiçoamento de Pessoal de Nível Superior - Brasil} (CAPES) - Finance Code 001, the \emph{Conselho Nacional de Desenvolvimento Científico e Tecnológico - Brasil} (CNPq), and the \emph{Fundação de Amparo à Pesquisa de Minas Gerais - Brasil} (FAPEMIG).
+This study was financed in part by the \emph{Coordenação de Aperfeiçoamento de Pessoal de Nível Superior - Brasil} (CAPES) - Finance Code 001, the \emph{Conselho Nacional de Desenvolvimento Científico e Tecnológico - Brasil} (CNPq), and the \emph{Fundação de Amparo à Pesquisa do Estado de São Paulo - Brasil} (FAPESP).
 
 \bibliographystyle{elsarticle-num}
 % \bibliographystyle{elsarticle-harv}
